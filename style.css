@@ -1,0 +1,235 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 18px
+
+### Font
+
+- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 300, 400, 600 */
+
+
+:root {
+    --clr-primary-soft: hsl(215, 51%, 70%);
+    --clr-primary-cyan: hsl(178, 100%, 50%);
+    --clr-mainBG: hsl(217, 54%, 11%);
+    --clr-cardBG: hsl(216, 50%, 16%);
+    --clr-line: hsl(215, 32%, 27%);
+    --clr-card-background: hsl(217, 50%, 10%);
+    --clr-card-background2: hsl(217, 50%, 10.8%);
+
+    --ff- : 'Outfit', sans-serif;
+}
+
+
+html {
+    background: var(--clr-mainBG);
+    font-family: var(--ff-);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+    
+}
+.main-card {
+    background-color: var(--clr-cardBG);
+    height: 550px;
+    width: 300px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 25px 0px 15px var(--clr-card-background) , 0px 20px 0px 40px var(--clr-card-background2);
+   
+    
+}
+.transition {
+    position: relative;
+    
+}
+.logo-image {
+    display: block;
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+   border-radius: 15px;
+}
+.overlay {
+    border-radius: 15px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    
+    transition: .5s ease;
+    background-color: var(--clr-primary-cyan);
+  }
+.transition:hover .overlay {
+    opacity: .7;
+    cursor: pointer;
+  }
+  .eye {
+      border-radius: 15px;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+h1 {
+    margin: 5px auto;
+    padding: 5px;
+    text-align: justify;
+    font-size: 20px;
+    color: hsl(0, 0%, 100%);
+    letter-spacing: .1em;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+h1:hover {
+    color: var(--clr-primary-cyan);
+    cursor: pointer;
+}
+
+hr {
+    border: 0 solid red;
+    border-top: 1px solid var(--clr-line);
+}
+
+p {
+    margin: 5px auto;
+    padding: 0 0 5px;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--clr-primary-soft);
+}
+
+.numbers {
+    margin: 0 auto;
+    line-height: 20px;
+    padding-bottom: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.icon {
+   max-width: 100%;
+   max-height: 100%;
+   margin: auto;
+}
+
+.left-span {
+    padding: 10px;
+    float: left;
+    vertical-align: middle;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.inside-left {
+    vertical-align: middle;
+    color: var(--clr-primary-cyan);
+    margin: 5px 0 5px 10px;
+    font-weight: 500;
+}
+.right-span {
+    padding: 10px;
+    float: right ;
+    vertical-align: middle;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.inside-right {
+    color: var(--clr-primary-soft);
+    margin: 5px 0 5px 10px;
+    font-weight: 500;
+}
+hr {
+    clear: both;
+    margin: 5px auto;
+    padding: 5px;
+    padding-top: 10px;
+}
+
+.footer {
+    clear: both;
+    vertical-align: middle;
+    display: inline-block;
+    padding: 10px;
+    
+}
+
+.footer img {
+    max-width: 10%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 15px;
+    float: left;
+    border: 1px white solid;
+}
+
+.rights {
+    color: var(--clr-primary-soft);
+    font-size: 12px;
+    float:left;
+    margin: 5px 0 5px 10px;
+    word-spacing: 2px;
+    font-weight: 500;
+}
+
+.name {
+    color: white ;
+    
+}
+
+.name:hover {
+    color: var(--clr-primary-cyan);
+    cursor: pointer;
+}
